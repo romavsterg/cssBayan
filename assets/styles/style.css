@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    position: static;
+}
+
+body {
+    margin: 15vh 20vw;
+}
+
+.line {
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: gray;
+}
+
+.css-bayan:hover {
+    color: #000000;
+}
+
+.css-bayan {
+    color: #483b8b;
+    font-size: 2em;
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    width: 100%;
+}
+
+.accordion-container {
+    width: 100%;
+}
+
+.accordion {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.accordion-title {
+    cursor: pointer;
+    width: 38vw;
+    margin-bottom: 1vh;
+}
+
+.accordion input {
+    display: none;
+}
+
+.accordion-content {
+    display: none;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+}
+
+.accordion input:checked ~ .accordion-content {
+    display: block;
+}
+
+
+.ok-meme {
+    background-image: url('/assets/memes/ok_meme.png');
+    background-size: cover;
+    width: 60vw;
+    height: 40vw;
+}
+
+.sadness-meme {
+    background-image: url('/assets/memes/funny_sadness_meme.png');
+    background-size: cover;
+    width: 60vw;
+    height: 22vw;
+}
+
+.goblin-meme {
+    background-image: url('/assets/memes/goblin_meme.png');
+    background-size: cover;
+    width: 60vw;
+    height: 50vw;
+}
+
+.kebab-meme {
+    background-image: url('/assets/memes/pickled_kebab_meme.png');
+    background-size: cover;
+    width: 60vw;
+    height: 60vw;
+}
