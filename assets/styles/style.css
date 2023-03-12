@@ -14,6 +14,7 @@ body {
     height: 1px;
     width: 100%;
     background-color: gray;
+    margin-bottom: 2vh;
 }
 
 .css-bayan:hover {
@@ -30,26 +31,37 @@ body {
 
 .accordion-container {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .accordion {
     width: 100%;
-    display: block;
+    cursor: pointer;
     height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5vw;
 }
 
 .accordion-title {
-    cursor: pointer;
-    width: 38vw;
-    margin-bottom: 1vh;
+    width: calc(100% - 6vw);
 }
 
-.accordion input {
+.input {
     display: none;
+    width: 3vw;
+    height: 3vw;
+    
 }
 
-.accordion-content {
-    display: none;
+.meme {
+    max-height: 0vw;
     transition: all 0.5s linear;
     -webkit-transition: all 0.5s linear;
     -moz-transition: all 0.5s linear;
@@ -57,34 +69,72 @@ body {
     -o-transition: all 0.5s linear;
 }
 
-.accordion input:checked ~ .accordion-content {
-    display: block;
+.accordion-content {
+    max-height: 0vw;
+    width: 100%;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    display: flex;
+    justify-content: center;
 }
 
+.cross {
+    background: url('/assets/images/cross.png');
+    width: 3vw;
+    height: 3vw;
+    background-size: contain;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+}
 
-.ok-meme {
-    background-image: url('/assets/memes/ok_meme.png');
-    background-size: cover;
+.input:checked ~ .cross{
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.input:checked ~ .accordion-content,
+.input:checked ~ .accordion-content img {
+    max-height: 60vw;
+}
+
+.input:not(:checked) ~ .accordion-content,
+.input:not(:checked) ~ .accordion-content img {
+    max-height: 0vw;
+}
+
+.project-meme {
+    background-image: url('/assets/memes/meme_1.png');
+    background-size: contain;
     width: 60vw;
     height: 40vw;
 }
 
-.sadness-meme {
-    background-image: url('/assets/memes/funny_sadness_meme.png');
+.coments-meme {
+    background-image: url('/assets/memes/meme_2.png');
     background-size: cover;
-    width: 60vw;
-    height: 22vw;
+    width: 30vw;
+    height: 35vw;
 }
 
-.goblin-meme {
-    background-image: url('/assets/memes/goblin_meme.png');
+.front-vs-back-meme {
+    background-image: url('/assets/memes/meme_3.png');
     background-size: cover;
     width: 60vw;
     height: 50vw;
 }
 
-.kebab-meme {
-    background-image: url('/assets/memes/pickled_kebab_meme.png');
+.computer-meme {
+    background-image: url('/assets/memes/meme_4.png');
     background-size: cover;
     width: 60vw;
     height: 60vw;
