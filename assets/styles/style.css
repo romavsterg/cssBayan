@@ -6,7 +6,7 @@
 }
 
 body {
-    margin: 15vh 20vw;
+    margin: 8vh 20vw;
 }
 
 .line {
@@ -17,13 +17,21 @@ body {
     margin-bottom: 2vh;
 }
 
-.css-bayan:hover {
+.css-bayan:hover{
     color: #000000;
+}
+
+.css-bayan:hover .cross {
+    display: block;
+}
+
+.css-bayan:not(:hover) .cross  {
+    display: none;
 }
 
 .css-bayan {
     color: #483b8b;
-    font-size: 2em;
+    font-size: 3vw;
     font-family: 'Courier New', Courier, monospace;
     width: 100%;
     width: 100%;
@@ -49,6 +57,10 @@ body {
     margin-bottom: 5vw;
 }
 
+.accordion:last-child {
+    margin-bottom: 0;
+}
+
 .accordion-title {
     width: calc(100% - 6vw);
 }
@@ -57,26 +69,27 @@ body {
     display: none;
     width: 3vw;
     height: 3vw;
-    
 }
 
 .meme {
     max-height: 0vw;
-    transition: all 0.5s linear;
-    -webkit-transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-    -ms-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
+    width: 23vw;
+    height: 23vw;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
 }
 
 .accordion-content {
     max-height: 0vw;
     width: 100%;
-    transition: all 0.5s linear;
-    -webkit-transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-    -ms-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
     display: flex;
     justify-content: center;
 }
@@ -104,7 +117,7 @@ body {
 
 .input:checked ~ .accordion-content,
 .input:checked ~ .accordion-content img {
-    max-height: 60vw;
+    max-height: 23vw;
 }
 
 .input:not(:checked) ~ .accordion-content,
@@ -112,30 +125,64 @@ body {
     max-height: 0vw;
 }
 
-.project-meme {
-    background-image: url('/assets/memes/meme_1.png');
-    background-size: contain;
-    width: 60vw;
-    height: 40vw;
-}
-
 .coments-meme {
     background-image: url('/assets/memes/meme_2.png');
     background-size: cover;
-    width: 30vw;
-    height: 35vw;
+}
+
+.project-meme {
+    background-image: url('/assets/memes/meme_1.png');
+    background-size: cover;
+    width: 32vw;
 }
 
 .front-vs-back-meme {
     background-image: url('/assets/memes/meme_3.png');
     background-size: cover;
-    width: 60vw;
-    height: 50vw;
 }
 
 .computer-meme {
     background-image: url('/assets/memes/meme_4.png');
     background-size: cover;
-    width: 60vw;
-    height: 60vw;
+}
+
+@media screen and (max-width: 820px) {
+    * {
+        font-size: 6vw;
+    }
+
+    body {
+        margin: 5vw 10vw;
+    }
+
+    .css-bayan:hover {
+        color: #483b8b;
+    }
+    
+    .meme {
+        width: 48vw;
+        height: 48vw;
+    }
+
+
+    .project-meme {
+        width: 84vw;
+        height: 57vw;
+    }
+
+    .input:checked ~ .accordion-content,
+    .input:checked ~ .accordion-content img {
+        max-height: 57vw;
+    }
+
+    .cross {
+        width: 6vw;
+        height: 6vw;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    * {
+        font-size: 7vw;
+    }
 }
