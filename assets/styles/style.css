@@ -95,7 +95,7 @@ body {
 }
 
 .cross {
-    background: url('/assets/images/cross.png');
+    background: url('../images/cross.png');
     width: 3vw;
     height: 3vw;
     background-size: contain;
@@ -126,23 +126,23 @@ body {
 }
 
 .coments-meme {
-    background-image: url('/assets/memes/meme_2.png');
+    background-image: url('../memes/meme_2.png');
     background-size: cover;
 }
 
 .project-meme {
-    background-image: url('/assets/memes/meme_1.png');
+    background-image: url('../memes/meme_1.png');
     background-size: cover;
     width: 32vw;
 }
 
 .front-vs-back-meme {
-    background-image: url('/assets/memes/meme_3.png');
+    background-image: url('../memes/meme_3.png');
     background-size: cover;
 }
 
 .computer-meme {
-    background-image: url('/assets/memes/meme_4.png');
+    background-image: url('../memes/meme_4.png');
     background-size: cover;
 }
 
